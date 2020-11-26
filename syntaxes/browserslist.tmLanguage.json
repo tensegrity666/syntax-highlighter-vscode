@@ -1,0 +1,106 @@
+{
+	"name": "browserlist",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#comment-line"
+    },
+		{
+			"include": "#headers"
+    },
+		{
+			"include": "#string"
+		},
+		{
+			"include": "#url"
+		},
+		{
+			"include": "#escapes"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.browserlist",
+				"match": "\\b(not|and|or|extends|,)\\b"
+			}]
+    },
+    "headers": {
+			"patterns": [{
+				"name": "header.control.browserlist",
+				"match": "^(\\[\\w+\\])\\i"
+			}]
+    },
+    "comment-line": {
+      "name": "comment.line.number-sign",
+      "begin": "#\\s",
+      "end": "\\n"
+    },
+    "string": {
+      "patterns": [
+        {
+          "name": "string.unquoted",
+          "begin": "^",
+          "end": "$",
+          "patterns": [
+            {
+              "include": "#escapes"
+            }
+          ]
+        }
+      ]
+    },
+    "url": {
+      "name": "meta.function.url",
+      "begin": "(?i)(?<![\\w@-])(url)(\\()",
+      "beginCaptures": {
+        "1": {
+          "name": "support.function.url"
+        },
+        "2": {
+          "name": "punctuation.section.function.begin.bracket.round"
+        }
+      },
+      "end": "\\)",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.section.function.end.bracket.round"
+        }
+      },
+      "patterns": [
+        {
+          "name": "variable.parameter.url",
+          "match": "[^'\")\\s]+"
+        },
+        {
+          "include": "#string"
+        },
+        {
+          "include": "#comment-line"
+        },
+        {
+          "include": "#escapes"
+        }
+      ]
+    },
+    "escapes": {
+      "patterns": [
+        {
+          "name": "constant.character.escape.codepoint",
+          "match": "\\\\[0-9a-fA-F]{1,6}"
+        },
+        {
+          "name": "constant.character.escape.newline",
+          "begin": "\\\\$\\s*",
+          "end": "^(?<!\\G)"
+        },
+        {
+          "name": "constant.character.escape",
+          "match": "\\\\."
+        }
+      ]
+    },
+	"scopeName": "source.browserlist"
+}

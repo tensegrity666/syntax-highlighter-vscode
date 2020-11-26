@@ -1,0 +1,25 @@
+{
+    "name": "browserslist-config-highlighter",
+    "displayName": "browserslist config highlighter",
+    "description": "browserslist config highlighter",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.51.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "browserslist",
+            "aliases": ["browserlist", "Browserlist"],
+            "extensions": [".browserslistrc","browserslist"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "browserlist",
+            "scopeName": "source.browserlist",
+            "path": "./syntaxes/browserslist.tmLanguage.json"
+        }]
+    }
+}
