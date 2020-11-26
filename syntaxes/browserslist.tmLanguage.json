@@ -15,9 +15,6 @@
 		},
 		{
 			"include": "#url"
-		},
-		{
-			"include": "#escapes"
 		}
 	],
 	"repository": {
@@ -74,9 +71,6 @@
         },
         {
           "include": "#comment-line"
-        },
-        {
-          "include": "#escapes"
         }
       ]
     },
