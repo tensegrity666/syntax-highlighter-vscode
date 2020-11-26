@@ -2,6 +2,7 @@
     "name": "browserslist-config-highlighter",
     "displayName": "browserslist config highlighter",
     "description": "browserslist config highlighter",
+    "publisher": "tensegrity666",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.51.0"

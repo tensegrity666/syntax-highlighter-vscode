@@ -34,21 +34,16 @@
 			}]
     },
     "comment-line": {
-      "name": "comment.line.number-sign",
+      "name": "comment.line.number-sign.browserslist",
       "begin": "#\\s",
       "end": "\\n"
     },
     "string": {
       "patterns": [
         {
-          "name": "string.unquoted",
+          "name": "string.unquoted.browserslist",
           "begin": "^",
-          "end": "$",
-          "patterns": [
-            {
-              "include": "#escapes"
-            }
-          ]
+          "end": "$"
         }
       ]
     },
@@ -82,23 +77,6 @@
         },
         {
           "include": "#escapes"
-        }
-      ]
-    },
-    "escapes": {
-      "patterns": [
-        {
-          "name": "constant.character.escape.codepoint",
-          "match": "\\\\[0-9a-fA-F]{1,6}"
-        },
-        {
-          "name": "constant.character.escape.newline",
-          "begin": "\\\\$\\s*",
-          "end": "^(?<!\\G)"
-        },
-        {
-          "name": "constant.character.escape",
-          "match": "\\\\."
         }
       ]
     },
