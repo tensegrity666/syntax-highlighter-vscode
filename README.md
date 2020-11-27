@@ -6,5 +6,5 @@ _Add syntax highlighting for configs browserslist_<br>
 
 * To start using extension with Visual Studio Code copy it into the `<user home>/.vscode/extensions` folder and restart Code.
 <br>
-<br>
+
 __Made with the VS Code's Yeoman templates generator__
