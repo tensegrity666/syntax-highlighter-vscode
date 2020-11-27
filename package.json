@@ -3,7 +3,8 @@
     "displayName": "browserslist config highlighter",
     "description": "browserslist config highlighter",
     "author": "tensegrity666",
-    "version": "0.0.1",
+    "icon": "./img/icon.png",
+    "version": "0.0.2",
     "engines": {
         "vscode": "^1.51.0"
     },
