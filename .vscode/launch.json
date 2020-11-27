@@ -2,7 +2,7 @@
 	"version": "0.2.0",
     "configurations": [
         {
-            "name": "Browserlist config highlighter",
+            "name": "Browserslist config highlighter",
             "type": "extensionHost",
             "request": "launch",
             "args": [

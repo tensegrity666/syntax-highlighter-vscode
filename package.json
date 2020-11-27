@@ -2,7 +2,7 @@
     "name": "browserslist-config-highlighter",
     "displayName": "browserslist config highlighter",
     "description": "browserslist config highlighter",
-    "publisher": "tensegrity666",
+    "author": "tensegrity666",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.51.0"
@@ -13,13 +13,13 @@
     "contributes": {
         "languages": [{
             "id": "browserslist",
-            "aliases": ["browserlist", "Browserlist"],
+            "aliases": ["browserslist", "Browserslist"],
             "extensions": [".browserslistrc","browserslist"],
             "configuration": "./language-configuration.json"
         }],
         "grammars": [{
-            "language": "browserlist",
-            "scopeName": "source.browserlist",
+            "language": "browserslist",
+            "scopeName": "source.browserslist",
             "path": "./syntaxes/browserslist.tmLanguage.json"
         }]
     }

@@ -1,34 +1,41 @@
 {
-	"name": "browserlist",
-	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#comment-line"
+  "name": "browserslist",
+  "patterns": [
+    {
+      "include": "#keywords"
     },
-		{
-			"include": "#headers"
+    {
+      "include": "#comment-line"
     },
-		{
-			"include": "#string"
-		},
-		{
-			"include": "#url"
-		}
-	],
-	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.browserlist",
-				"match": "\\b(not|and|or|extends|,)\\b"
-			}]
+    {
+      "include": "#headers"
+    },
+    {
+      "include": "#string"
+    },
+    {
+      "include": "#browsers"
+    },
+    {
+      "include": "#percents"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.browserslist",
+          "match": "\\b(not|and|or|extends|,)\\b"
+        }
+      ]
     },
     "headers": {
-			"patterns": [{
-				"name": "header.control.browserlist",
-				"match": "^(\\[\\w+\\])\\i"
-			}]
+      "patterns": [
+        {
+          "name": "header.control.browserslist",
+          "match": "^(\\[\\w+\\])\\i"
+        }
+      ]
     },
     "comment-line": {
       "name": "comment.line.number-sign.browserslist",
@@ -44,36 +51,22 @@
         }
       ]
     },
-    "url": {
-      "name": "meta.function.url",
-      "begin": "(?i)(?<![\\w@-])(url)(\\()",
-      "beginCaptures": {
-        "1": {
-          "name": "support.function.url"
-        },
-        "2": {
-          "name": "punctuation.section.function.begin.bracket.round"
-        }
-      },
-      "end": "\\)",
-      "endCaptures": {
-        "0": {
-          "name": "punctuation.section.function.end.bracket.round"
-        }
-      },
+    "browsers": {
       "patterns": [
         {
-          "name": "variable.parameter.url",
-          "match": "[^'\")\\s]+"
-        },
-        {
-          "include": "#string"
-        },
-        {
-          "include": "#comment-line"
+          "name": "string.unquoted.browserslist",
+          "match": "(?i)\\b(Android|BlackBerry|bb|Chrome|ChromeAndroid|Edge|Electron|Explorer|ie|FirefoxAndroid|and_ff|iOS|ios_saf|Baidu|Node|Opera|OperaMini|op_mini|OperaMobile|ExplorerMobile|ie_mob|Firefox|ff|op_mob|QQAndroid|and_qq|Safari|Samsung|UCAndroid|and_uc|kaios)\\b"
         }
       ]
     },
-	"scopeName": "source.browserlist"
+    "percents": {
+      "patterns": [
+        {
+          "name": "constant.numeric.browserslist",
+          "match": "\\d*0?\\.?\\d+%"
+        }
+      ]
+    },
+    "scopeName": "source.browserslist"
   }
 }
